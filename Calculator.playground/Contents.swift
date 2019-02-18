@@ -5,14 +5,14 @@ var temp = [String]()
 var fullStop : Bool = true
 var currentDisplay : String = "0"
 
-func test() {
-    print("currentDisplay", currentDisplay)
-    print("temp", temp)
-    print("math", math)
-    print("fullStop", fullStop)
-}
-
-test()
+//func test() {
+//    print("currentDisplay", currentDisplay)
+//    print("temp", temp)
+//    print("math", math)
+//    print("fullStop", fullStop)
+//}
+//
+//test()
 
 func clear() {
     currentDisplay = "0"
@@ -20,7 +20,7 @@ func clear() {
 }
 
 func updateDisplay(value: String) {
-    if(fullStop == true) {
+    if(fullStop == true || currentDisplay == "0") {
         currentDisplay = value
         fullStop = false
     } else{
@@ -29,9 +29,16 @@ func updateDisplay(value: String) {
 }
 
 func addSubtract(value: String, sign: String) {
+    if (math.count == 0) {
+        math.append(value)
+    } else {
+        temp.append(value)
+    }
     fullStop = true;
-    temp.append(value)
     temp.append(sign)
+    if (temp[0] == "add") {
+        
+    }
 }
 
 updateDisplay(value: "0")
@@ -40,3 +47,14 @@ updateDisplay(value: "1")
 print("currentDisplay", currentDisplay)
 updateDisplay(value: "2")
 print("currentDisplay", currentDisplay)
+
+addSubtract(value: currentDisplay, sign: "add")
+
+updateDisplay(value: "0")
+print("currentDisplay", currentDisplay)
+updateDisplay(value: "1")
+print("currentDisplay", currentDisplay)
+updateDisplay(value: "2")
+print("currentDisplay", currentDisplay)
+
+addSubtract(value: currentDisplay, sign: "add")
