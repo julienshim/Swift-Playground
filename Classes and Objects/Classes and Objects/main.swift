@@ -8,9 +8,9 @@
 
 import Foundation
 
-let myCar = Car()
+let myCar = Car(customerChosenColor: "Red")
 
 print(myCar.color)
 print(myCar.numberOfSeats)
 print(myCar.typeOfCar)
-  
+
