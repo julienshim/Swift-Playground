@@ -11,11 +11,12 @@ import Foundation
 let myCar = Car()
 let someRichGuysCar = Car(customerChosenColor: "Gold")
 
-print(myCar.color)
-print(myCar.numberOfSeats)
-print(myCar.typeOfCar)
+//print(myCar.color)
+//print(myCar.numberOfSeats)
+//print(myCar.typeOfCar)
+//
+//print(someRichGuysCar.color)
+//print(someRichGuysCar.numberOfSeats)
+//print(someRichGuysCar.typeOfCar)
 
-print(someRichGuysCar.color)
-print(someRichGuysCar.numberOfSeats)
-print(someRichGuysCar.typeOfCar)
-
+myCar.drive()
