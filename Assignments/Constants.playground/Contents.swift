@@ -1,3 +1,7 @@
-import UIKit
+//Write your code here.
+let secondsInAMinute = 60
+let secondsInAnHour = secondsInAMinute * 60
 
-var str = "Hello, playground"
+
+//Don't change the code below.
+print(secondsInAnHour)
